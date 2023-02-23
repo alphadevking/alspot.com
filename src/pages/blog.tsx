@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 
-export const Blog = () => {
+const Blog = () => {
     return (
         <>
             <Head>
@@ -10,3 +10,5 @@ export const Blog = () => {
         </>
     )
 }
+
+export default Blog
