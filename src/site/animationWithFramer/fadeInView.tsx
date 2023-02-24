@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { GlobalTypes } from "../globals";
 
-function FadeInView({ className, children, delay = 0.5 }: GlobalTypes) {
+function FadeInView({ className, children, delay = 0.2 } : GlobalTypes) {
     const [ref, inView] = useInView({
-        threshold: 0.1, // Trigger animation when component is 10% visible
-        triggerOnce: true, // Only trigger animation once
+        threshold: 0.3, // Trigger animation when component is 30% visible
+        triggerOnce: false, // Only trigger animation once
     });
 
     const fadeInVariants = {
