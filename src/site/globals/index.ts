@@ -19,17 +19,5 @@ export interface GlobalTypes {
     closeTime?: string | undefined,
     prenav?: boolean | undefined,
     logoName?: string | undefined,
-}
-
-export const fadeInOutVariants = {
-    initial: {
-        opacity: 0,
-        },
-    animate: {
-        opacity: 1,
-            transition: {
-            duration: 0.5,
-                ease: "easeInOut",
-            },
-    },
+    delay?: number | undefined,
 }

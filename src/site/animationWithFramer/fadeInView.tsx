@@ -1,0 +1,17 @@
+import { motion } from "framer-motion";
+import { GlobalTypes } from "../globals";
+
+function FadeInView({ className, children } : GlobalTypes) {
+    const fadeInVariants = {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
+    };
+
+    return (
+        <motion.div className={`${className} transition-all duration-300`} initial="hidden" animate="visible" variants={fadeInVariants}>
+            {children}
+        </motion.div>
+    );
+}
+
+export default FadeInView;
