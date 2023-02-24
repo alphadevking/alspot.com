@@ -20,22 +20,22 @@ const Header = () => {
                 </div>
                 <div className='grid self-center py-6 px-3 tracking-wider gap-y-2'>
                     <div className='text-5xl font-bold'>Favour Orukpe_</div>
-                    <div className='text-white/80'>Dev since <strong>2022</strong> | Front-End & Web3 Developer</div>
+                    <div className='text-[#8e8e8e]'>Dev since <strong>2022</strong> | Front-End & Web3 Developer</div>
                     <div className='mt-8 grid gap-y-2'>
                         <tr className='grid grid-cols-4'>
-                            <td className='font-bold text-white/50'>AGE:</td>
+                            <td className='font-bold text-[#7C7C7C]'>AGE:</td>
                             <td className='col-span-3'>{currentAge}</td>
                         </tr>
                         <tr className='grid grid-cols-4'>
-                            <td className='font-bold text-white/50'>PHONE:</td>
+                            <td className='font-bold text-[#7C7C7C]'>PHONE:</td>
                             <td className='col-span-3'><Link href="tel:+2348140389939">0 (+234) 814-038-9939</Link></td>
                         </tr>
                         <tr className='grid grid-cols-4'>
-                            <td className='font-bold text-white/50'>EMAIL:</td>
+                            <td className='font-bold text-[#7C7C7C]'>EMAIL:</td>
                             <td className='col-span-3'><Link href="mail:alphadevking@gmail.com">alphadevking@gmail.com</Link></td>
                         </tr>
                         <tr className='grid grid-cols-4'>
-                            <td className='font-bold text-white/50'>ADDRESS:</td>
+                            <td className='font-bold text-[#7C7C7C]'>ADDRESS:</td>
                             <td className='col-span-3'>Ekpoma, Edo State, Nigeria</td>
                         </tr>
                     </div>

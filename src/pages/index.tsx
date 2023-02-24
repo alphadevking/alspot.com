@@ -16,7 +16,6 @@ export default function Home() {
       </Head>
       <Layout navbar footer>
         <Header />
-        <Header />
       </Layout>
     </>
   )
