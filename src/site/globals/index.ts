@@ -1,7 +1,7 @@
 import { MouseEventHandler, ReactNode } from 'react';
 
 export interface GlobalTypes {
-    text?: string | undefined,
+    text?: string | undefined | any,
     children?: ReactNode | undefined,
     href?: string | undefined;
     className?: string | undefined;

@@ -14,13 +14,13 @@ const Header = () => {
     const currentAge = `${presentYear - yearOfBirth}+`
 
     return (
-        <div className='pt-32'>
+        <div className='pt-24'>
             <Motion variants={Variants.fadeInView} className='flex flex-wrap'>
                 <div className='self-center py-3 md:py-5 px-3 '>
                     <Image src={alpha} alt={''} className='rounded-full md:rounded md:w-80 h-fit'/>
                 </div>
                 <div className='grid self-center py-6 px-3 tracking-wider gap-y-2'>
-                    <Motion variants={Variants.fadeInFromLeft} className='text-5xl font-bold'>Favour Orukpe_</Motion>
+                    <Motion variants={Variants.fadeInFromRight} className='text-5xl font-bold'>Favour Orukpe_</Motion>
                     <div className='text-[#8e8e8e]'>Dev since <strong>2022</strong> | Front-End & Web3 Developer</div>
                     <div className='mt-8 grid gap-y-2'>
                         <tr className='grid grid-cols-4'>

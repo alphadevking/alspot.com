@@ -10,7 +10,7 @@ export const Footer = () => {
 
       <div className='text-center my-5'>
 
-        <div className='p-2 text-xs'> Copyright {currentYear} SpotOnTech <span className=''>|</span> Creating technologies at peak speed!</div>
+        <div className='p-2 text-xs text-[#8e8e8e]'> Copyright {currentYear} SpotOnTech <span className=''>|</span> Creating technologies at peak speed!</div>
 
       </div>
         

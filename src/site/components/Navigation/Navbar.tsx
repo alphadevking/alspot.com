@@ -4,7 +4,7 @@ import { topNavItems } from ".";
 
 function Navbar() {
     return (
-        <nav className="fixed w-screen flex h-24 bg-inherit/30 shadow-xl backdrop-blur-md px-5 md:px-10">
+        <nav className="fixed w-screen flex h-20 bg-inherit/30 shadow-xl backdrop-blur-md px-5 md:px-10">
             {/* Logo */}
             <Link className="px-5 py-3" href={'/'}>
                 <img src="/logo_black_white.png" className="w-16" />
