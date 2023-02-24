@@ -19,8 +19,7 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
       <Layout navbar footer>
-        <Header/>
-        {animatedDiv}
+        <Header/>        
       </Layout>
     </>
   )
