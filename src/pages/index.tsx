@@ -1,4 +1,3 @@
-import FadeInView from '@/site/animationWithFramer/fadeInView';
 import Header from '@/site/components/Sections/Header';
 import dynamic from 'next/dynamic';
 
@@ -16,12 +15,8 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
       <Layout navbar footer>
-        <FadeInView>
-          <Header />
-        </FadeInView>
-        <FadeInView>
-          <Header />
-        </FadeInView>
+        <Header />
+        <Header />
       </Layout>
     </>
   )

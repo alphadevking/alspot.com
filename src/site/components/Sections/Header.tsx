@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import alpha from '@/site/assets/images/alpha.jpg'
 import { SiGithub, SiLinkedin, SiTwitter } from 'react-icons/si'
+import FadeInView from '@/site/animationWithFramer/fadeInView'
 
 const Header = () => {
     
@@ -13,7 +14,7 @@ const Header = () => {
 
     return (
         <div className='pt-32'>
-            <div className='flex flex-wrap'>
+            <FadeInView className='flex flex-wrap'>
                 <div className='self-center py-3 md:py-5 px-3'>
                     <Image src={alpha} alt={''} className='rounded-full w-1/2 md:rounded md:w-60 h-fit'/>
                 </div>
@@ -50,7 +51,7 @@ const Header = () => {
                         </Link>
                     </div>
                 </div>
-            </div>
+            </FadeInView>
         </div>
     )
 }

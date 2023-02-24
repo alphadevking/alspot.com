@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { GlobalTypes } from "../globals";
 
-function FadeInView({ className, children } : GlobalTypes) {
+function FadeInView({ className, children, delay = 0.5 } : GlobalTypes) {
     const fadeInVariants = {
         hidden: { opacity: 0 },
-        visible: { opacity: 1 },
+        visible: { opacity: 1, transition: {delay} },
     };
 
     return (
