@@ -22,7 +22,7 @@ const Layout:React.FC<GlobalTypes> = ({ navbar, children, footer}) => (
                     null
             }
 
-            <div className='px-5'>
+            <div className='px-5 md:px-10'>
 
                 {children}
                 

@@ -1,9 +1,15 @@
+import Header from '@/site/components/Sections/Header';
+import { fadeInOutVariants } from '@/site/globals';
+import { useAnimateInView } from '@/site/hooks/useAnimateInView';
 import dynamic from 'next/dynamic';
 
 const Head = dynamic(() => import('next/head'));
 const Layout = dynamic(() => import('./../site/components/Layout'));
 
 export default function Home() {
+
+  const animatedDiv = useAnimateInView(fadeInOutVariants);
+
   return (
     <>
       <Head>
@@ -13,6 +19,8 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
       <Layout navbar footer>
+        <Header/>
+        {animatedDiv}
       </Layout>
     </>
   )

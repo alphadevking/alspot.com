@@ -1,12 +1,16 @@
 import React from 'react'
 
 export const Footer = () => {
+
+  const date = new Date()
+  const currentYear = date.getFullYear()
+
   return (
-    <div className='py-5 absolute inset-x-0 bottom-4'>
+    <div className='py-5 md:block hidden'>
 
       <div className='text-center my-5'>
 
-        <div className='p-2 text-sm'> Copyright 2023 SpotOnTech&nbsp;| |&nbsp;<small>Creating technologies at peak speed!</small></div>
+        <div className='p-2 text-xs'> Copyright {currentYear} SpotOnTech <span className=''>|</span> Creating technologies at peak speed!</div>
 
       </div>
         
