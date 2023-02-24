@@ -4,7 +4,7 @@ import { GlobalTypes } from "../globals";
 
 function Motion({ variants, className, children, delay = 0.2 }: GlobalTypes) {
     const [ref, inView] = useInView({
-        threshold: 0.3, // Trigger animation when component is 30% visible
+        threshold: 0.1, // Trigger animation when component is 30% visible
         triggerOnce: false, // Only trigger animation once
     });
 
