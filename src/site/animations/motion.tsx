@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { GlobalTypes } from "../globals";
 
-function Motion({ variants, className, children, delay = 0.2 }: GlobalTypes) {
+function Motion({ variants, className, children, delay = 0.3 }: GlobalTypes) {
     const [ref, inView] = useInView({
-        threshold: 0.1, // Trigger animation when component is 30% visible
+        threshold: 0.1, // Trigger animation when component is 10% visible
         triggerOnce: false, // Only trigger animation once
     });
 

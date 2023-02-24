@@ -1,38 +1,39 @@
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { GlobalTypes } from "../globals";
 
-export function Typewriter({ className, text } : GlobalTypes) {
+export function Typewriter({ className, text }: GlobalTypes) {
     const [ref, inView] = useInView({
-        threshold: 0.5,
+        threshold: 0,
         triggerOnce: false,
     });
     const [textToShow, setTextToShow] = useState("");
 
     useEffect(() => {
-        let i = 0;
-        const interval = setInterval(() => {
-            if (i < text.length) {
-                setTextToShow((prev) => prev + text.charAt(i));
+        let i = -1;
+        let interval: NodeJS.Timeout;
+
+        if (inView) {
+            interval = setInterval(() => {
                 i++;
-            } else {
-                clearInterval(interval);
-            }
-        }, 100);
+                setTextToShow((prev) => prev + text.charAt(i));
+
+                if (i === text.length - 1) {
+                    clearInterval(interval);
+                }
+            }, 50);
+        } else {
+            setTextToShow("");
+        }
 
         return () => clearInterval(interval);
     }, [inView, text]);
 
     return (
-        <motion.span
-            ref={ref}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            className={className}
-        >
-            {textToShow}
-        </motion.span>
+        <div ref={ref} className={className}>
+            {textToShow.split("").map((char, index) => (
+                <span key={index}>{char}</span>
+            ))}
+        </div>
     );
-};
+}

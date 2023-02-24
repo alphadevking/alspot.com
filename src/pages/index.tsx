@@ -1,4 +1,6 @@
 import Header from '@/site/components/Sections/Header';
+import Hello from '@/site/components/Sections/Hello';
+import Resume from '@/site/components/Sections/Resume';
 import dynamic from 'next/dynamic';
 
 const Head = dynamic(() => import('next/head'));
@@ -16,6 +18,8 @@ export default function Home() {
       </Head>
       <Layout navbar footer>
         <Header />
+        <Hello />
+        <Resume />
       </Layout>
     </>
   )
