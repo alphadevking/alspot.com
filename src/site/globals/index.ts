@@ -20,4 +20,5 @@ export interface GlobalTypes {
     prenav?: boolean | undefined,
     logoName?: string | undefined,
     delay?: number | undefined,
+    variants?: any;
 }
