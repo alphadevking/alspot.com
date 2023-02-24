@@ -17,7 +17,7 @@ const Header = () => {
         <div className='pt-32'>
             <Motion variants={Variants.fadeInView} className='flex flex-wrap'>
                 <div className='self-center py-3 md:py-5 px-3 '>
-                    <Image src={alpha} alt={''} className='rounded-full w-1/2 md:rounded md:w-96 h-fit'/>
+                    <Image src={alpha} alt={''} className='rounded-full hidden md:rounded md:w-80 h-fit md:inline-block'/>
                 </div>
                 <div className='grid self-center py-6 px-3 tracking-wider gap-y-2'>
                     <Motion variants={Variants.fadeInFromLeft} className='text-5xl font-bold'>Favour Orukpe_</Motion>
