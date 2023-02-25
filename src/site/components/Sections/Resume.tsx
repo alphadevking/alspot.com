@@ -1,4 +1,6 @@
+import Motion from "@/site/animations/motion"
 import { Typewriter } from "@/site/animations/typewriter"
+import { Variants } from "@/site/animations/variants"
 
 const educationStats = [
     {institution: "Ambrose Alli University", duration: "2019 - 2023", course: "Bachelor, Computer Science"},
@@ -12,13 +14,13 @@ const employmentStats = [
 
 const Resume = () => {
     return (
-        <div className="grid gap-8 p-0 md:p-5 py-5">
+        <Motion variants={Variants.fadeInView} className="grid gap-8 p-0 md:p-5 py-5">
 
             <Typewriter text="Resume_" className="text-3xl" />
 
             <div className="flex flex-col">
 
-                <div>
+                <Motion variants={Variants.fadeInFromLeft}>
 
                     <h3 className="text-sm py-5 font-bold mb-2 uppercase tracking-widest">
                         Education
@@ -40,9 +42,9 @@ const Resume = () => {
                         })
                     }
 
-                </div>
+                </Motion>
 
-                <div>
+                <Motion variants={Variants.fadeInFromRight}>
 
                     <h3 className="text-sm py-5 font-bold mb-2 uppercase tracking-widest">
                         Employment
@@ -64,11 +66,11 @@ const Resume = () => {
                         })
                     }
 
-                </div>
+                </Motion>
                 
             </div>
 
-        </div>
+        </Motion>
     )
 }
 
