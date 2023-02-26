@@ -21,7 +21,7 @@ export function Typewriter({ className, text }: GlobalTypes) {
                 if (i === text.length - 1) {
                     clearInterval(interval);
                 }
-            }, 50);
+            }, 100);
         } else {
             setTextToShow("");
         }

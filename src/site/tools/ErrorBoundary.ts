@@ -18,7 +18,7 @@ class ErrorBoundary extends Component<Props, State> {
     static getDerivedStateFromError(_: Error): State {
         return { hasError: true };
     }
-
+    // ON build, disable these messages passed to the console
     componentDidCatch(error: Error, errorInfo: ErrorInfo) {
         console.error('Uncaught error:', error, errorInfo);
     }
