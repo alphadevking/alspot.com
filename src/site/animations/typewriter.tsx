@@ -30,10 +30,12 @@ export function Typewriter({ className, text }: GlobalTypes) {
     }, [inView, text]);
 
     return (
-        <div ref={ref} className={className}>
-            {textToShow.split("").map((char, index) => (
-                <span key={index}>{char}</span>
-            ))}
-        </div>
+        <>
+            <div ref={ref} className={className}>
+                {textToShow.split("").map((char, index) => (
+                    <span key={index}>{char}</span>
+                ))}
+            </div>
+        </>
     );
 }
