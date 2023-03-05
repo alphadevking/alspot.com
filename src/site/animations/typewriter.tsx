@@ -4,7 +4,7 @@ import { GlobalTypes } from "../globals";
 
 export function Typewriter({ className, text }: GlobalTypes) {
     const [ref, inView] = useInView({
-        threshold: 0,
+        threshold: 1,
         triggerOnce: false,
     });
     const [textToShow, setTextToShow] = useState("");
@@ -21,7 +21,7 @@ export function Typewriter({ className, text }: GlobalTypes) {
                 if (i === text.length - 1) {
                     clearInterval(interval);
                 }
-            }, 100);
+            }, 300);
         } else {
             setTextToShow("");
         }

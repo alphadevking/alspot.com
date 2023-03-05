@@ -1,5 +1,5 @@
 import { SiGithub, SiLinkedin, SiTwitter } from 'react-icons/si'
-import { Variants } from '@/site/animations/variants'
+import { variants } from '@/site/animations/variants'
 import Motion from '@/site/animations/motion'
 import alpha from '@/site/assets/images/alpha.jpg'
 import dynamic from 'next/dynamic'
@@ -17,14 +17,16 @@ const Header = () => {
     return (
         <div className='pt-24'>
 
-            <Motion variants={Variants.fadeInView} className='flex flex-wrap'>
+            <Motion variant={variants.fadeInView} className='grid grid-cols-1 md:grid-cols-3'>
 
-                <div className='self-center py-3 md:py-5 px-3 '>
-                    <Image src={alpha} alt={''} className='rounded-full md:rounded md:w-80 h-fit pointer-events-none' />
-                </div>
+                <Motion variant={variants.fadeInView}>
+                    <div className='self-center py-3 md:py-5 px-3'>
+                        <Image src={alpha} alt={''} className='rounded-full md:rounded md:w-80 h-fit pointer-events-none' />
+                    </div>
+                </Motion>
 
-                <div className='grid self-center py-6 px-3 tracking-wider gap-y-2'>
-                    <Motion variants={Variants.fadeInFromRight} className='text-5xl font-bold'>Favour Orukpe_</Motion>
+                <div className='grid self-center py-6 px-3 tracking-wider gap-y-2 col-span-2'>
+                    <Motion variant={variants.fadeInFromRight} className='text-5xl font-bold'>Favour Orukpe_</Motion>
                     <div className='text-[#8e8e8e]'>Dev since <strong>2022</strong> | Front-End & Web3 Developer</div>
                     <div className='mt-8 grid gap-y-2'>
                         <div className='grid grid-cols-4'>
@@ -62,6 +64,7 @@ const Header = () => {
                 </div>
                                 
             </Motion>
+            
         </div>
     )
 }

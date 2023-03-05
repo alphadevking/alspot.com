@@ -1,6 +1,7 @@
+import Loading from "@/site/animations/loading"
 import Motion from "@/site/animations/motion"
 import { Typewriter } from "@/site/animations/typewriter"
-import { Variants } from "@/site/animations/variants"
+import { variants } from "@/site/animations/variants"
 
 const educationStats = [
     {institution: "Ambrose Alli University", duration: "2019 - 2023", course: "Bachelor, Computer Science"},
@@ -12,15 +13,24 @@ const employmentStats = [
     { workplace: "Smart Earners Team", year: "September 2022 - Present", workTitle: "Intern, Web-Developer, working with React, typescript and Web3 technologies." },
 ]
 
+const skills = [
+    {
+        skill: "Engineering", level: "50"
+    },
+    {
+        skill: "", level: ""
+    }
+]
+
 const Resume = () => {
     return (
-        <Motion variants={Variants.fadeInView} className="grid gap-8 p-0 md:p-5 py-5">
+        <Motion variant={variants.fadeInView} className="grid gap-8 p-0 md:p-5 py-5">
 
             <Typewriter text="Resume_" className="text-3xl" />
 
             <div className="flex flex-col">
 
-                <Motion variants={Variants.fadeInFromLeft}>
+                <Motion variant={variants.fadeInView}>
 
                     <h3 className="text-sm py-5 font-bold mb-2 uppercase tracking-widest">
                         Education
@@ -44,7 +54,7 @@ const Resume = () => {
 
                 </Motion>
 
-                <Motion variants={Variants.fadeInFromRight}>
+                <Motion variant={variants.fadeInView}>
 
                     <h3 className="text-sm py-5 font-bold mb-2 uppercase tracking-widest">
                         Employment
@@ -65,6 +75,27 @@ const Resume = () => {
                             )
                         })
                     }
+
+                </Motion>
+
+                <Motion variant={variants.fadeInView}>
+
+                    <h3 className="text-sm py-5 font-bold mb-2 uppercase tracking-widest">
+                        General Skills
+                    </h3>
+
+                    {
+                        skills.map((val, key) => {
+                            return (
+                                <div className="py-3" key={key}>
+                                    <div>{val.skill}</div>
+                                    <div>{val.level}</div>
+                                </div>
+                            )
+                        })
+                    }
+
+                    <Loading/>
 
                 </Motion>
                 
