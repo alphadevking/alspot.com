@@ -4,6 +4,8 @@ import { GlobalTypes } from '../globals/';
 import { AppWrapper } from './AppWrapper';
 import Navbar from './Navigation/Navbar';
 import ThemeSwitch from '../tools/NextJSThemeSwitch';
+import Head from 'next/head';
+import Script from 'next/script';
 
 const Layout:React.FC<GlobalTypes> = ({ navbar, children, footer}) => (
 
@@ -36,6 +38,10 @@ const Layout:React.FC<GlobalTypes> = ({ navbar, children, footer}) => (
             }
 
         </AppWrapper>
+
+        <Script>
+            <script src="//code.jivosite.com/widget/OLF8iQTisE" async></script>
+        </Script>
 
     </main>
 
