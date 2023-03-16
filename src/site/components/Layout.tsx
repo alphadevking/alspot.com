@@ -39,9 +39,7 @@ const Layout:React.FC<GlobalTypes> = ({ navbar, children, footer}) => (
 
         </AppWrapper>
 
-        <Script>
-            <script src="//code.jivosite.com/widget/OLF8iQTisE" async></script>
-        </Script>
+        <Script src="//code.jivosite.com/widget/OLF8iQTisE" async/>
 
     </main>
 
