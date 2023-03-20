@@ -7,7 +7,7 @@ import ThemeSwitch from '../tools/NextJSThemeSwitch';
 import Head from 'next/head';
 import Script from 'next/script';
 
-const Layout: React.FC<GlobalTypes> = ({ navbar, children, footer }) => (
+const Layout:React.FC<GlobalTypes> = ({ navbar, children, footer}) => (
 
     <main className='min-h-screen'>
 
@@ -18,8 +18,8 @@ const Layout: React.FC<GlobalTypes> = ({ navbar, children, footer }) => (
             </span>
 
             {
-                navbar ?
-                    <Navbar />
+                navbar ? 
+                    <Navbar/>
                     :
                     null
             }
@@ -27,9 +27,9 @@ const Layout: React.FC<GlobalTypes> = ({ navbar, children, footer }) => (
             <div className='px-5 md:px-32'>
 
                 {children}
-
+                
                 <div className="gtranslate_wrapper"></div>
-
+                
             </div>
 
             {
@@ -41,6 +41,8 @@ const Layout: React.FC<GlobalTypes> = ({ navbar, children, footer }) => (
 
         </AppWrapper>
 
+        <Script src="//code.jivosite.com/widget/OLF8iQTisE" async/>
+        
         <Script
             id="gtranslate-settings"
             dangerouslySetInnerHTML={{
@@ -56,7 +58,6 @@ const Layout: React.FC<GlobalTypes> = ({ navbar, children, footer }) => (
         `,
             }}
         />
-        <Script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer />
 
     </main>
 
