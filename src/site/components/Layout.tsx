@@ -41,8 +41,11 @@ const Layout:React.FC<GlobalTypes> = ({ navbar, children, footer}) => (
 
         </AppWrapper>
 
-        <Script src="//code.jivosite.com/widget/OLF8iQTisE" async/>
-        
+        <Script src="//code.jivosite.com/widget/OLF8iQTisE" async />
+
+        {/* GTranslator widget script */}
+        <Script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer />
+
         <Script
             id="gtranslate-settings"
             dangerouslySetInnerHTML={{
