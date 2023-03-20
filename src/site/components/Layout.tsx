@@ -42,6 +42,7 @@ const Layout: React.FC<GlobalTypes> = ({ navbar, children, footer }) => (
         </AppWrapper>
 
         <Script
+            id="gtranslate-settings"
             dangerouslySetInnerHTML={{
                 __html: `
             window.gtranslateSettings = {
@@ -52,7 +53,8 @@ const Layout: React.FC<GlobalTypes> = ({ navbar, children, footer }) => (
             "float_switcher_open_direction": "bottom",
             "flag_style": "3d"
             };
-        `, }}
+        `,
+            }}
         />
         <Script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer />
 
