@@ -1,44 +1,62 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useRef, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 
-function useOnScreen(ref: any) {
-    const [isIntersecting, setIntersecting] = useState(false);
+interface LoadingProps {
+    size: number;
+    className?: string;
+}
+
+function Loading({ size, className }: LoadingProps) {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const animationControls = useAnimation();
+
+    const containerVariants = {
+        initial: {
+            x: "-100%" // Initial position outside the container
+        },
+        animate: {
+            x: "0%" // Animated position inside the container
+        }
+    };
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                // Update state when the observer detects the target element
-                setIntersecting(entry.isIntersecting);
+                if (entry.isIntersecting) {
+                    animationControls.start("animate");
+                }
             },
-            {
-                threshold: 0.5 // Trigger the observer when the target is 50% visible
-            }
+            { threshold: 0.5 } // Adjust the threshold as needed
         );
 
-        if (ref.current) {
-            observer.observe(ref.current);
+        if (containerRef.current) {
+            observer.observe(containerRef.current);
         }
 
         return () => {
-            observer.unobserve(ref.current);
+            if (containerRef.current) {
+                observer.unobserve(containerRef.current);
+            }
         };
-    }, [ref]);
-
-    return isIntersecting;
-}
-
-function Loading() {
-    const ref = useRef<HTMLDivElement>(null);
-    const isVisible = useOnScreen(ref);
+    }, [animationControls]);
 
     return (
-        <div className="h-2 relative max-w-lg rounded-full overflow-hidden">
-            <div className="w-full h-full bg-gray-200 absolute"></div>
-            <div
-                ref={ref}
-                className={`h-full bg-gray-400 absolute duration-1000 transition-transform ${isVisible ? `w-[${'50%'}]` : "w-0"
-                    }`}
-                style={{ transform: "translateX(-100%)" }}
-            ></div>
+        <div
+            ref={containerRef}
+            className={`max-w-md bg-gray-300 h-4 rounded-xl relative overflow-hidden ${className}`}
+        >
+            <motion.div
+                style={{ width: `${size}%` }}
+                className={`rounded-r-sm px-1 h-full bg-gray-800 absolute`}
+                variants={containerVariants}
+                initial="initial"
+                animate={animationControls}
+                transition={{ duration: 0.5 }}
+            >
+                <span className={`px-1 text-xs float-right text-slate-100`}>
+                    {size}%
+                </span>
+            </motion.div>
         </div>
     );
 }

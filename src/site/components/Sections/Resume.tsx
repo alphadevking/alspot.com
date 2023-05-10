@@ -15,11 +15,29 @@ const employmentStats = [
 
 const skills = [
     {
-        skill: "Engineering", level: "50"
+        skill: "HTML 5.0", level: 80
     },
     {
-        skill: "", level: ""
-    }
+        skill: "BOOTSTRAP 5", level: 80
+    },
+    {
+        skill: "CSS 3.0", level: 70
+    },
+    {
+        skill: "PYTHON", level: 80
+    },
+    {
+        skill: "JAVASCRIPT", level: 85
+    },
+    {
+        skill: "GIT", level: 90
+    },
+    {
+        skill: "TYPESCRIPT", level: 95
+    },
+    {
+        skill: "ADOBE PHOTOSHOP", level: 70
+    },
 ]
 
 const Resume = () => {
@@ -30,7 +48,7 @@ const Resume = () => {
 
             <div className="flex flex-col">
 
-                <Motion variant={variants.fadeInView}>
+                <div>
 
                     <h3 className="text-sm py-5 font-bold mb-2 uppercase tracking-widest">
                         Education
@@ -52,9 +70,9 @@ const Resume = () => {
                         })
                     }
 
-                </Motion>
+                </div>
 
-                <Motion variant={variants.fadeInView}>
+                <div>
 
                     <h3 className="text-sm py-5 font-bold mb-2 uppercase tracking-widest">
                         Employment
@@ -76,26 +94,26 @@ const Resume = () => {
                         })
                     }
 
-                </Motion>
+                </div>
 
-                <Motion variant={variants.fadeInView}>
+                <Motion>
 
                     <h3 className="text-sm py-5 font-bold mb-2 uppercase tracking-widest">
                         General Skills
                     </h3>
 
-                    {
-                        skills.map((val, key) => {
-                            return (
-                                <div className="py-3" key={key}>
-                                    <div>{val.skill}</div>
-                                    <div>{val.level}</div>
-                                </div>
-                            )
-                        })
-                    }
-
-                    <Loading/>
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
+                        {
+                            skills.map((val, key) => {
+                                return (
+                                    <div className="py-3" key={key}>
+                                        <div className="text-xs">{val.skill}</div>
+                                        <Loading className='my-5 -z-10' size={val.level} />
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
 
                 </Motion>
                 
