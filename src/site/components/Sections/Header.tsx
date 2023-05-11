@@ -4,11 +4,7 @@ import Motion from '@/site/animations/motion'
 import alpha from '@/site/assets/images/alpha.jpg'
 import dynamic from 'next/dynamic'
 
-const Header = ({
-    id
-}:{
-    id?: string
-}) => {
+const Header = () => {
 
     const yearOfBirth = 2001
     const date = new Date()
@@ -19,7 +15,7 @@ const Header = ({
     const Link = dynamic(() => import('next/link'))
 
     return (
-        <div id={id} className='pt-24'>
+        <div className='pt-24'>
 
             <Motion variant={variants.fadeInView} className='grid grid-cols-1 md:grid-cols-3'>
 
@@ -61,7 +57,7 @@ const Header = ({
                         <Link href={'https://www.linkedin.com/in/favour-orukpe-31432725b/'} target='_blank' rel='noopener noreferrer' className='text-[#6aadce] hover:text-[#6aadcea9] transition-all duration-300'>
                             <SiLinkedin />
                         </Link>
-                        <Link href={'https://www.twitter.com/alpha_devking/'} target='_blank' rel='noopener noreferrer' className='text-[#6aadce] hover:text-[#6aadcea9] transition-all duration-300'>
+                        <Link href={'https://www.twitter.com/alphadevking_1/'} target='_blank' rel='noopener noreferrer' className='text-[#6aadce] hover:text-[#6aadcea9] transition-all duration-300'>
                             <SiTwitter />
                         </Link>
                     </div>
