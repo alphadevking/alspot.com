@@ -14,7 +14,7 @@ const Hello = () => {
                 I am a frontend web developer with the ability to construct a fully integrated website from the bottom up with the best user experience. Professional, reliable, and efficient code writing skills employing the most recent Web development industry standards. Quick learner, diligent worker, and cooperative team member with expertise in a variety of scripting languages and multimedia Web technologies.
             </div>
 
-            <Link href={'/'} className="flex gap-2 align-middle text-blue-500">
+            <Link target='_blank' href={'/alphadevking.pdf'} className="flex gap-2 align-middle text-blue-500">
                 <FaDownload className="mt-1"/>
                 <span className="font-bold tracking-wide">DOWNLOAD CV</span>
             </Link>

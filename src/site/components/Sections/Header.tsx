@@ -4,7 +4,11 @@ import Motion from '@/site/animations/motion'
 import alpha from '@/site/assets/images/alpha.jpg'
 import dynamic from 'next/dynamic'
 
-const Header = () => {
+const Header = ({
+    id
+}:{
+    id?: string
+}) => {
 
     const yearOfBirth = 2001
     const date = new Date()
@@ -15,7 +19,7 @@ const Header = () => {
     const Link = dynamic(() => import('next/link'))
 
     return (
-        <div className='pt-24'>
+        <div id={id} className='pt-24'>
 
             <Motion variant={variants.fadeInView} className='grid grid-cols-1 md:grid-cols-3'>
 
