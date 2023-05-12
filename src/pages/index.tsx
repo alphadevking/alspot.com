@@ -1,5 +1,6 @@
 import Header from '@/site/components/Sections/Header';
 import Hello from '@/site/components/Sections/Hello';
+import MyProjects from '@/site/components/Sections/Projects';
 import Resume from '@/site/components/Sections/Resume';
 import dynamic from 'next/dynamic';
 
@@ -20,6 +21,7 @@ export default function Home() {
         <Header />
         <Hello />
         <Resume />
+        <MyProjects/>
       </Layout>
     </>
   )
