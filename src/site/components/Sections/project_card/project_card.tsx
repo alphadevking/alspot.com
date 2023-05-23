@@ -12,7 +12,7 @@ const ProjectCard = () => {
                         <div className="overflow-clip">
                             <Image src={val.image} alt={val.alt} className="rounded" layout="responsive" />
                         </div>
-                        <div className="px-8 py-3">
+                        <div className="px-8 py-3 -z-10">
                             <div className="my-5 grid gap-3">
                                 <h1 className="uppercase font-bold text-xl">{val.name}</h1>
                                 <p className="text-sm opacity-75">{val.description}</p>
