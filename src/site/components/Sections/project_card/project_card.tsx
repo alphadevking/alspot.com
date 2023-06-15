@@ -8,9 +8,9 @@ const ProjectCard = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5 box-border">
             {project_card_array.map((val) => {
                 return (
-                    <div key={val.id} className="grid gap-5 shadow-md rounded-xl overflow-hidden ring-1 ring-slate-500/10">
-                        <div className="overflow-clip">
-                            <Image src={val.image} alt={val.alt} className="rounded" layout="responsive" />
+                    <div key={val.id} className="grid gap-5 shadow-md rounded-xl overflow-clip ring-1 ring-slate-500/10">
+                        <div className="overflow-clip max-h-96">
+                            <Image src={val.image} alt={val.alt} className="rounded" style={{}} />
                         </div>
                         <div className="px-8 py-3">
                             <div className="my-5 grid gap-3">

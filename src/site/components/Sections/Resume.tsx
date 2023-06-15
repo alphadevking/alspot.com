@@ -36,7 +36,7 @@ const skills = [
         skill: "TYPESCRIPT", level: 95
     },
     {
-        skill: "ADOBE PHOTOSHOP", level: 70
+        skill: "REACT JS", level: 95
     },
 ]
 

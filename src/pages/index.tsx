@@ -2,6 +2,7 @@ import Header from '@/site/components/Sections/Header';
 import Hello from '@/site/components/Sections/Hello';
 import MyProjects from '@/site/components/Sections/Projects';
 import Resume from '@/site/components/Sections/Resume';
+import Testimonials from '@/site/components/Sections/Testimonials';
 import dynamic from 'next/dynamic';
 
 const Head = dynamic(() => import('next/head'));
@@ -22,6 +23,7 @@ export default function Home() {
         <Hello />
         <Resume />
         <MyProjects/>
+        <Testimonials/>
       </Layout>
     </>
   )

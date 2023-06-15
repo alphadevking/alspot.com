@@ -6,9 +6,7 @@ import ErrorBoundary from '../tools/ErrorBoundary'
 export const AppWrapper:React.FC<GlobalTypes> = ({ children }) => {
   return (
     <ThemeProvider>
-      <ErrorBoundary fallback>
-        {children}
-      </ErrorBoundary>
+      {children}
     </ThemeProvider>
   )
 }
