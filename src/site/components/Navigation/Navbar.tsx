@@ -1,7 +1,8 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import { FaBars, FaEthereum, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { topNavItems } from ".";
+import { SiGithub } from "react-icons/si";
 
 function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -27,15 +28,16 @@ function Navbar() {
                 ))}
             </span>
 
-            <div className="grid grid-flow-col gap-1 justify-end py-5">
-                <div className="py-4 text-xs">Donate:</div>
-                <button className="text-xl"><FaEthereum /></button>
+            <div className="gap-2 justify-end my-3 py-5 px-5 text-sm hidden md:block">
+                <Link href={'https://www.github.com/alphadevking/alspot.com'} target='_blank' rel='noopener noreferrer' className='text-[#6aadce] hover:text-[#6aadcea9] transition-all duration-300'>
+                    Source Code
+                </Link>
             </div>
 
             {/* Hamburger and Mobile menu */}
-            <div className="flex justify-end md:hidden">
+            <div className="fixed top-0 right-0 mt-6 mr-8 py-1 z-50 md:hidden">
                 <button
-                    className="p-5 justify-end float-right rounded-md hover:bg-slate-100/10 transition-colors"
+                    className="p-2 rounded-md hover:bg-slate-100/10 transition-colors"
                     onClick={toggleMobileMenu}
                 >
                     {
@@ -44,11 +46,12 @@ function Navbar() {
                 </button>
             </div>
             <div
-                className={`${isMobileMenuOpen ? "flex" : "hidden"
-                    } md:hidden mr-auto relative`}
+                className={`${isMobileMenuOpen ? "block" : "hidden"
+                    } md:hidden transition-transform transform duration-500 ease-in-out origin-top mt-[15vw]`}
+                style={{ transform: isMobileMenuOpen ? 'scaleY(1)' : 'scaleY(0)' }}
             >
                 {/* Mobile menu content */}
-                <div className="grid gap-2 bg-white backdrop-blur-xl text-slate-800 rounded-l-3xl p-3 absolute top-[18vw] -right-5 shadow-2xl">
+                <div className="grid gap-2 bg-white backdrop-blur-xl text-slate-800 rounded-b-3xl p-5 my-2 mx-5 shadow-2xl">
                     {topNavItems.map((val, key) => (
                         <span
                             key={key}
@@ -60,6 +63,11 @@ function Navbar() {
                             </Link>
                         </span>
                     ))}
+                    <div className="flex gap-2 justify-end py-3 px-5 inset-10 text-sm">
+                        <Link href={'https://www.github.com/alphadevking/alspot.com'} target='_blank' rel='noopener noreferrer' className='text-[#6aadce] hover:text-[#6aadcea9] transition-all duration-300'>
+                            Source Code
+                        </Link>
+                    </div>
                 </div>
             </div>
         </nav>
