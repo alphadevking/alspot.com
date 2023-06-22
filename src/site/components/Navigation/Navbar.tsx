@@ -47,7 +47,7 @@ function Navbar() {
             </div>
             <div
                 className={`${isMobileMenuOpen ? "block" : "hidden"
-                    } md:hidden transition-transform transform duration-300 ease-in-out origin-top -z-10 mt-[15vw]`}
+                    } md:hidden transition-transform transform duration-300 ease-in-out origin-top -z-10 mt-[16%]`}
                 style={{ transform: isMobileMenuOpen ? 'scaleY(1)' : 'scaleY(0)' }}
             >
                 {/* Mobile menu content */}
