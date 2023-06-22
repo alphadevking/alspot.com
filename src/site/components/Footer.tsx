@@ -19,11 +19,12 @@ export const Footer = () => {
 
   return (
     <div>
+      <div className='shadow-lg pt-10'/>
       <div className="container mx-auto py-12 my-5 px-5 md:px-32">
         <div className="">
-          <p className="text-4xl font-semibold">Get in touch with us</p>
+          <p className="text-3xl font-semibold">Get in touch with us</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-12 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-12 mt-12 text-sm">
           <div className="grid gap-5">
 
             <dl className="grid gap-3">
@@ -108,7 +109,6 @@ export const Footer = () => {
               </button>
             </form> */}
             <div className='text-center my-5'>
-              <div className='p-2 text-xs text-[#8e8e8e]'> Copyright {currentYear} SpotOnTech <span className=''>|</span> Creating technologies at peak speed!</div>
               <IconContext.Provider value={{ className: "social-media-icon", size: "2em" }}>
                 <div className='flex justify-center space-x-4 mt-3'>
                   <Link href='https://www.twitter.com/alphadevking_1/' target='_blank'>
@@ -134,6 +134,7 @@ export const Footer = () => {
                 </div>
               </IconContext.Provider>
             </div>
+            <div className='p-2 text-xs text-[#8e8e8e] text-center'> Copyright {currentYear} SpotOnTech <span className=''>|</span> Creating technologies at peak speed!</div>
           </div>
         </div>
       </div>
