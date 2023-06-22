@@ -35,7 +35,7 @@ function Navbar() {
             </div>
 
             {/* Hamburger and Mobile menu */}
-            <div className="fixed top-0 right-0 mt-6 mr-8 py-1 z-50 md:hidden">
+            <div className="fixed top-0 right-0 mt-6 mr-8 py-1 md:hidden">
                 <button
                     className="p-2 rounded-md hover:bg-slate-100/10 transition-colors"
                     onClick={toggleMobileMenu}
@@ -47,7 +47,7 @@ function Navbar() {
             </div>
             <div
                 className={`${isMobileMenuOpen ? "block" : "hidden"
-                    } md:hidden transition-transform transform duration-500 ease-in-out origin-top mt-[15vw]`}
+                    } md:hidden transition-transform transform duration-300 ease-in-out origin-top -z-10 mt-[15vw]`}
                 style={{ transform: isMobileMenuOpen ? 'scaleY(1)' : 'scaleY(0)' }}
             >
                 {/* Mobile menu content */}
@@ -58,7 +58,7 @@ function Navbar() {
                             className="px-5 py-3 text-sm inset-10 cursor-pointer"
                             onClick={toggleMobileMenu}
                         >
-                            <ScrollLink spy={true} smooth={true} to={val.href} className="tracking-wide font-bold opacity-80 hover:opacity-50 transition-all" target={val.target}>
+                            <ScrollLink onClick={toggleMobileMenu} spy={true} smooth={true} to={val.href} className="tracking-wide font-bold opacity-80 hover:opacity-50 transition-all" target={val.target}>
                                 {val.title}
                             </ScrollLink>
                         </span>

@@ -2,8 +2,9 @@
 import { FaTwitter, FaInstagram, FaLinkedinIn, FaGithub, FaExternalLinkSquareAlt } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
 import { motion } from 'framer-motion';
-import { FormEvent, useState } from "react";
+// import { FormEvent, useState } from "react";
 import Link from "next/link";
+import { Element } from 'react-scroll';
 
 export const Footer = () => {
   // const [name, setName] = useState('');
@@ -18,7 +19,7 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div>
+    <Element name='contact'>
       <div className='shadow-lg pt-10'/>
       <div className="container mx-auto py-12 my-5 px-5 md:px-32">
         <div className="">
@@ -138,6 +139,6 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Element>
   );
 };
