@@ -4,7 +4,6 @@ import { GlobalTypes } from '../globals/';
 import { AppWrapper } from './AppWrapper';
 import Navbar from './Navigation/Navbar';
 import ThemeSwitch from '../tools/NextJSThemeSwitch';
-import Head from 'next/head';
 import Script from 'next/script';
 
 const Layout:React.FC<GlobalTypes> = ({ navbar, children, footer}) => (
