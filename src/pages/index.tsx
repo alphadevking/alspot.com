@@ -4,6 +4,7 @@ import MyProjects from '@/site/components/Sections/Projects';
 import Resume from '@/site/components/Sections/Resume';
 import Testimonials from '@/site/components/Sections/Testimonials';
 import dynamic from 'next/dynamic';
+import { Element } from 'react-scroll';
 
 const Head = dynamic(() => import('next/head'));
 const Layout = dynamic(() => import('./../site/components/Layout'));
@@ -19,11 +20,27 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
       <Layout navbar footer>
-        <Header />
-        <Hello />
-        <Resume />
-        <MyProjects/>
-        <Testimonials/>
+
+        <Element name='/'>
+          <Header />
+        </Element>
+
+        <Element name='' className='pt-16 md:pt-24'>
+          <Hello />
+        </Element>
+
+        <Element name='resume' className='pt-16 md:pt-24'>
+          <Resume />
+        </Element>
+
+        <Element name='portfolio' className='pt-16 md:pt-24'>
+          <MyProjects />
+        </Element>
+
+        <Element name='testimonial' className='pt-16 md:pt-24'>
+          <Testimonials/>
+        </Element>
+
       </Layout>
     </>
   )

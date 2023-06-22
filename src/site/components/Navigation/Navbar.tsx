@@ -1,8 +1,8 @@
 import Link from "next/link";
+import { Link as ScrollLink } from 'react-scroll';
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { topNavItems } from ".";
-import { SiGithub } from "react-icons/si";
 
 function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -12,7 +12,7 @@ function Navbar() {
     };
 
     return (
-        <nav className="fixed w-screen flex h-20 bg-inherit/30 shadow-xl backdrop-blur-md px-5 md:px-10 z-10 justify-between">
+        <nav className="fixed w-screen flex h-20 bg-inherit/30 shadow-xl backdrop-blur-md px-5 md:px-10 z-50 justify-between">
             {/* Logo */}
             <Link className="px-5 py-3" href="/">
                 <img src="/logo_black_white.png" className="w-16" alt="Logo" />
@@ -20,10 +20,10 @@ function Navbar() {
             {/* Navigation link items */}
             <span className="px-5 py-3 self-center md:block hidden">
                 {topNavItems.map((val, key) => (
-                    <span key={key} className="px-5 py-3 text-sm">
-                        <Link href={val.href} className="tracking-wide font-bold opacity-80 hover:opacity-50 transition-all" target={val.target}>
+                    <span key={key} className="px-5 py-3 text-sm cursor-pointer">
+                        <ScrollLink spy={true} smooth={true} to={val.href} className="tracking-wide font-bold opacity-80 hover:opacity-50 transition-all" target={val.target}>
                             {val.title}
-                        </Link>
+                        </ScrollLink>
                     </span>
                 ))}
             </span>
@@ -55,12 +55,12 @@ function Navbar() {
                     {topNavItems.map((val, key) => (
                         <span
                             key={key}
-                            className="px-5 py-3 text-sm inset-10"
+                            className="px-5 py-3 text-sm inset-10 cursor-pointer"
                             onClick={toggleMobileMenu}
                         >
-                            <Link href={val.href} className="tracking-wide font-bold opacity-80 hover:opacity-50 transition-all" target={val.target}>
+                            <ScrollLink spy={true} smooth={true} to={val.href} className="tracking-wide font-bold opacity-80 hover:opacity-50 transition-all" target={val.target}>
                                 {val.title}
-                            </Link>
+                            </ScrollLink>
                         </span>
                     ))}
                     <div className="flex gap-2 justify-end py-3 px-5 inset-10 text-sm">

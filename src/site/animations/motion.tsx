@@ -4,7 +4,7 @@ import { MotionProps } from "./variants";
 
 function Motion({ variant, className, children }: MotionProps) {
     const [ref, inView] = useInView({
-        threshold: 0.2, // Trigger animation when component is 20% visible
+        threshold: 0.1, // Trigger animation when component is 10% visible
         triggerOnce: true, // Only trigger animation once
     });
 

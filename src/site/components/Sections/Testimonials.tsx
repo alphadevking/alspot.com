@@ -31,10 +31,11 @@ const Testimonials = () => {
             <Carousel
                 additionalTransfrom={0}
                 arrows
-                autoPlaySpeed={3000}
+                autoplay
+                autoPlaySpeed={1500}
                 centerMode={false}
                 className=""
-                containerClass="container"
+                containerClass="container z-0"
                 dotListClass="bg-inherit opacity-30 hover:opacity-70 duration-300"
                 showDots
                 draggable
@@ -80,7 +81,7 @@ const Testimonials = () => {
                 {
                     testimonials.map((val, key) => {
                         return (
-                            <div key={key} className="select-none h-52 m-5 grid gap-3 border-x-2 border-slate-600 rounded-2xl p-4 mb-4 text-center">
+                            <div key={key} className="select-none max-h-full m-5 grid gap-3 border-x-2 border-slate-600 rounded-2xl p-4 mb-4 text-center">
                                 <h3 className="text-lg font-bold pt-2">{val.name}</h3>
                                 <small className='text-xs font-light italic'>{val.bio}</small>
                                 <p className="text-sm opacity-70 py-2 px-5 md:px-16">{val.description}</p>
