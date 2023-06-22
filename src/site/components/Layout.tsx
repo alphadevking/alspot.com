@@ -13,7 +13,7 @@ const Layout:React.FC<GlobalTypes> = ({ navbar, children, footer}) => (
 
         <AppWrapper>
 
-            <span className='flex fixed z-50 right-0 top-2/3 shadow-xl bg-white/10 backdrop-blur-[3px] hover:pr-5 rounded-l-3xl p-2 align-middle duration-300 hover:bg-white/20 text-xl animate-bounce'>
+            <span className='flex fixed z-[999] right-0 top-2/3 shadow-xl bg-white/10 backdrop-blur-[3px] hover:pr-5 rounded-l-3xl p-2 align-middle duration-300 hover:bg-white/20 text-xl animate-bounce'>
                 <ThemeSwitch />
             </span>
 
