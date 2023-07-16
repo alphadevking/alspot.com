@@ -2,16 +2,17 @@ import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
 import { MotionProps } from "./variants";
 
-function Motion({ className, children }: MotionProps) {
+function Motion({ className, children, variant }: MotionProps) {
     const [ref, inView] = useInView({
         threshold: 0.1,
         triggerOnce: true,
     });
 
     const animationProps = useSpring({
-        from: { opacity: 0 },
+        delay: 50,
+        from: variant ? variant.from : { opacity: 0 },
         to: { opacity: inView ? 1 : 0 },
-        config: { duration: 500, delay: 50 },
+        config: { tension: 170, friction: 26 }, // Values to be tweaked for desired effect
     });
 
     return (
