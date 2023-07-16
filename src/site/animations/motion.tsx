@@ -1,24 +1,27 @@
-import { motion } from "framer-motion";
+import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
 import { MotionProps } from "./variants";
 
-function Motion({ variant, className, children }: MotionProps) {
+function Motion({ className, children }: MotionProps) {
     const [ref, inView] = useInView({
-        threshold: 0.1, // Trigger animation when component is 10% visible
-        triggerOnce: true, // Only trigger animation once
+        threshold: 0.1,
+        triggerOnce: true,
+    });
+
+    const animationProps = useSpring({
+        from: { opacity: 0 },
+        to: { opacity: inView ? 1 : 0 },
+        config: { duration: 500, delay: 50 },
     });
 
     return (
-        <motion.div
+        <animated.div
             ref={ref}
             className={`${className} transition-all duration-300`}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={variant}
-            transition={{ duration: 1, delayChildren: 0.2, ease:"easeInOut", velocity: 0.1 }}
+            style={animationProps}
         >
             {children}
-        </motion.div>
+        </animated.div>
     );
 }
 

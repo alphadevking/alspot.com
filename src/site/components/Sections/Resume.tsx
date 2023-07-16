@@ -1,7 +1,7 @@
-import Loading from "@/site/animations/loading"
-import Motion from "@/site/animations/motion"
-import { Typewriter } from "@/site/animations/typewriter"
-import { variants } from "@/site/animations/variants"
+import Loading from "../../animations/loading"
+import Motion from "../../animations/motion"
+import { Typewriter } from "../../animations/typewriter"
+import { variants } from "../../animations/variants"
 
 const educationStats = [
     {institution: "Ambrose Alli University", duration: "2019 - 2023", course: "Bachelor, Computer Science"},

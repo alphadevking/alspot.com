@@ -1,6 +1,5 @@
-import Link from "next/link";
 import { Link as ScrollLink } from 'react-scroll';
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { topNavItems } from ".";
 
@@ -14,9 +13,9 @@ function Navbar() {
     return (
         <nav className="fixed w-screen flex h-20 bg-inherit/30 shadow-xl backdrop-blur-md px-5 md:px-10 z-50 justify-between">
             {/* Logo */}
-            <Link className="px-5 py-3" href="/">
+            <a className="px-5 py-3" href="/">
                 <img src="/logo_black_white.png" className="w-16" alt="Logo" />
-            </Link>
+            </a>
             {/* Navigation link items */}
             <span className="px-5 py-3 self-center md:block hidden">
                 {topNavItems.map((val, key) => (
@@ -29,9 +28,9 @@ function Navbar() {
             </span>
 
             <div className="gap-2 justify-end my-3 py-5 px-5 text-sm hidden md:block">
-                <Link href={'https://www.github.com/alphadevking/alspot.com'} target='_blank' rel='noopener noreferrer' className='text-[#6aadce] hover:text-[#6aadcea9] transition-all duration-300'>
+                <a href={'https://www.github.com/alphadevking/alspot.com'} target='_blank' rel='noopener noreferrer' className='text-[#6aadce] hover:text-[#6aadcea9] transition-all duration-300'>
                     Source Code
-                </Link>
+                </a>
             </div>
 
             {/* Hamburger and Mobile menu */}
@@ -64,9 +63,9 @@ function Navbar() {
                         </span>
                     ))}
                     <div className="flex gap-2 justify-end py-3 px-5 inset-10 text-sm">
-                        <Link href={'https://www.github.com/alphadevking/alspot.com'} target='_blank' rel='noopener noreferrer' className='text-[#6aadce] hover:text-[#6aadcea9] transition-all duration-300'>
+                        <a href={'https://www.github.com/alphadevking/alspot.com'} target='_blank' rel='noopener noreferrer' className='text-[#6aadce] hover:text-[#6aadcea9] transition-all duration-300'>
                             Source Code
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </div>

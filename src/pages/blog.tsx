@@ -1,13 +1,9 @@
-import Layout from '@/site/components/Layout'
-import Head from 'next/head'
+import Layout from '../site/components/Layout'
 import React from 'react'
 
 const Blog = () => {
     return (
         <React.Fragment>
-            <Head>
-                
-            </Head>
             <Layout navbar footer>
 
             </Layout>

@@ -1,6 +1,6 @@
-import Motion from "@/site/animations/motion"
-import { Typewriter } from "@/site/animations/typewriter"
-import { variants } from "@/site/animations/variants"
+import Motion from "../../animations/motion"
+import { Typewriter } from "../../animations/typewriter"
+import { variants } from "../../animations/variants"
 import Project_card from "./project_card/project_card"
 
 const MyProjects = () => {

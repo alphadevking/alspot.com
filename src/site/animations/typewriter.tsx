@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
 import { GlobalTypes } from "../globals";
 
@@ -9,9 +10,15 @@ export function Typewriter({ className, text }: GlobalTypes) {
     });
     const [textToShow, setTextToShow] = useState("");
 
+    const animationProps = useSpring({
+        from: { opacity: 0 },
+        to: { opacity: inView ? 1 : 0 },
+        config: { duration: 1000 },
+    });
+
     useEffect(() => {
         let i = -1;
-        let interval: NodeJS.Timeout;
+        let interval: number | undefined;
 
         if (inView) {
             interval = setInterval(() => {
@@ -31,11 +38,11 @@ export function Typewriter({ className, text }: GlobalTypes) {
 
     return (
         <>
-            <div ref={ref} className={className}>
+            <animated.div ref={ref} className={className} style={animationProps}>
                 {textToShow.split("").map((char, index) => (
                     <span key={index}>{char}</span>
                 ))}
-            </div>
+            </animated.div>
         </>
     );
 }

@@ -3,8 +3,6 @@ import { Footer } from './Footer'
 import { GlobalTypes } from '../globals/';
 import { AppWrapper } from './AppWrapper';
 import Navbar from './Navigation/Navbar';
-import ThemeSwitch from '../tools/NextJSThemeSwitch';
-import Script from 'next/script';
 
 const Layout:React.FC<GlobalTypes> = ({ navbar, children, footer}) => (
 
@@ -13,7 +11,7 @@ const Layout:React.FC<GlobalTypes> = ({ navbar, children, footer}) => (
         <AppWrapper>
 
             <span className='flex fixed z-[999] right-0 top-2/3 shadow-xl bg-white/10 backdrop-blur-[3px] hover:pr-5 rounded-l-3xl p-2 align-middle duration-300 hover:bg-white/20 text-xl animate-bounce'>
-                <ThemeSwitch />
+                {/* <ThemeSwitch /> */}
             </span>
 
             {
@@ -40,12 +38,12 @@ const Layout:React.FC<GlobalTypes> = ({ navbar, children, footer}) => (
 
         </AppWrapper>
 
-        <Script src="//code.jivosite.com/widget/OLF8iQTisE" async />
+        <script src="//code.jivosite.com/widget/OLF8iQTisE" async />
 
         {/* GTranslator widget script */}
-        <Script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer />
+        <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer />
 
-        <Script
+        <script
             id="gtranslate-settings"
             dangerouslySetInnerHTML={{
                 __html: `

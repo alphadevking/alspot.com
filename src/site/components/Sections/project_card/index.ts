@@ -1,5 +1,5 @@
-import chromanft from '@/site/assets/images/chromanft.png'
-import clock from '@/site/assets/images/clock.png'
+import chromanft from '../../../assets/images/chromanft.png'
+import clock from '../../../assets/images/clock.png'
 
 let id = 0;
 

@@ -1,8 +1,7 @@
 import { SiGithub, SiLinkedin, SiTwitter } from 'react-icons/si'
-import { variants } from '@/site/animations/variants'
-import Motion from '@/site/animations/motion'
-import alpha from '@/site/assets/images/alpha.jpg'
-import dynamic from 'next/dynamic'
+import { variants } from '../../animations/variants'
+import Motion from '../../animations/motion'
+import alpha from './../../assets/images/alpha.jpg'
 
 const Header = () => {
 
@@ -11,9 +10,6 @@ const Header = () => {
     const presentYear = date.getFullYear()
     const currentAge = `${presentYear - yearOfBirth}+`
 
-    const Image = dynamic(() => import('next/image'))
-    const Link = dynamic(() => import('next/link'))
-
     return (
         <div className='pt-24'>
 
@@ -21,7 +17,7 @@ const Header = () => {
 
                 <Motion variant={variants.fadeInView}>
                     <div className='self-center py-3 md:py-5 px-3'>
-                        <Image src={alpha} alt={''} className='rounded-full md:rounded md:w-80 h-fit pointer-events-none' />
+                        <img src={alpha} alt={''} className='rounded-full md:rounded md:w-80 h-fit pointer-events-none' />
                     </div>
                 </Motion>
 
@@ -36,13 +32,13 @@ const Header = () => {
                         <div className='grid grid-cols-4'>
                             <div className='font-bold text-[#7C7C7C]'>PHONE:</div>
                             <div className='col-span-3'>
-                                <Link href="tel:+2348140389939" target='_blank'>0 (+234) 814-038-9939</Link>
+                                <a href="tel:+2348140389939" target='_blank'>0 (+234) 814-038-9939</a>
                             </div>
                         </div>
                         <div className='grid grid-cols-4'>
                             <div className='font-bold text-[#7C7C7C]'>EMAIL:</div>
                             <div className='col-span-3'>
-                                <Link href="mail:alphadevking@gmail.com" target='_blank'>alphadevking@gmail.com</Link>
+                                <a href="mail:alphadevking@gmail.com" target='_blank'>alphadevking@gmail.com</a>
                             </div>
                         </div>
                         <div className='grid grid-cols-4'>
@@ -51,15 +47,15 @@ const Header = () => {
                         </div>
                     </div>
                     <div className='flex gap-x-5 text-3xl mt-8'>
-                        <Link href={'https://www.github.com/alphadevking/'} target='_blank' rel='noopener noreferrer' className='text-[#6aadce] hover:text-[#6aadcea9] transition-all duration-300'>
+                        <a href={'https://www.github.com/alphadevking/'} target='_blank' rel='noopener noreferrer' className='text-[#6aadce] hover:text-[#6aadcea9] transition-all duration-300'>
                             <SiGithub />
-                        </Link>
-                        <Link href={'https://www.linkedin.com/in/favour-orukpe-31432725b/'} target='_blank' rel='noopener noreferrer' className='text-[#6aadce] hover:text-[#6aadcea9] transition-all duration-300'>
+                        </a>
+                        <a href={'https://www.aedin.com/in/favour-orukpe-31432725b/'} target='_blank' rel='noopener noreferrer' className='text-[#6aadce] hover:text-[#6aadcea9] transition-all duration-300'>
                             <SiLinkedin />
-                        </Link>
-                        <Link href={'https://www.twitter.com/alphadevking_1/'} target='_blank' rel='noopener noreferrer' className='text-[#6aadce] hover:text-[#6aadcea9] transition-all duration-300'>
+                        </a>
+                        <a href={'https://www.twitter.com/alphadevking_1/'} target='_blank' rel='noopener noreferrer' className='text-[#6aadce] hover:text-[#6aadcea9] transition-all duration-300'>
                             <SiTwitter />
-                        </Link>
+                        </a>
                     </div>
                 </div>
                                 

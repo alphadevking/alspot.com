@@ -1,6 +1,3 @@
-import Image from "next/image";
-import React from "react";
-import Link from "next/link";
 import { project_card_array } from ".";
 
 const ProjectCard = () => {
@@ -10,7 +7,7 @@ const ProjectCard = () => {
                 return (
                     <div key={val.id} className="grid gap-5 shadow-md rounded-xl overflow-clip ring-1 ring-slate-500/10">
                         <div className="overflow-clip max-h-96">
-                            <Image src={val.image} alt={val.alt} className="rounded" style={{}} />
+                            <img src={val.image} alt={val.alt} className="rounded" style={{}} />
                         </div>
                         <div className="px-8 py-3">
                             <div className="my-5 grid gap-3">
@@ -26,7 +23,7 @@ const ProjectCard = () => {
                                 </div>
                             </div>
                             <div className="my-5 text-sm opacity-70 float-right hover:opacity-50 duration-300">
-                                <Link href={val.link} target="_blank">{val.linkTitle}</Link>
+                                <a href={val.link} target="_blank">{val.linkTitle}</a>
                             </div>
                         </div>
                     </div>
