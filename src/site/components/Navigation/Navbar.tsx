@@ -11,7 +11,7 @@ function Navbar() {
     };
 
     return (
-        <nav className="fixed w-screen flex h-20 bg-inherit/30 shadow-xl backdrop-blur-md px-5 md:px-10 z-50 justify-between">
+        <nav className="fixed w-full flex h-20 bg-inherit/30 shadow-xl backdrop-blur-md px-5 md:px-10 z-50 justify-between">
             {/* Logo */}
             <a className="px-5 py-3" href="/">
                 <img src="/logo_black_white.png" className="w-16" alt="Logo" />

@@ -5,10 +5,10 @@ import alpha from './../../assets/images/alpha.jpg'
 
 const Header = () => {
 
-    const yearOfBirth = 2001
-    const date = new Date()
-    const presentYear = date.getFullYear()
-    const currentAge = `${presentYear - yearOfBirth}+`
+    // const yearOfBirth = 2001
+    // const date = new Date()
+    // const presentYear = date.getFullYear()
+    // const currentAge = `${presentYear - yearOfBirth}+`
 
     return (
         <div className='pt-24'>
@@ -23,12 +23,12 @@ const Header = () => {
 
                 <div className='grid self-center py-6 px-3 tracking-wider gap-y-2 col-span-2'>
                     <Motion variant={variants.fadeInFromRight} className='text-5xl font-bold'>Favour Orukpe_</Motion>
-                    <div className='text-[#8e8e8e]'>Dev since <strong>2022</strong> | Front-End & Web3 Developer</div>
+                    <div className='text-[#8e8e8e]'>Blockchain Dev since <strong>2022</strong> | Front-End & Web3 Developer</div>
                     <div className='mt-8 grid gap-y-2'>
-                        <div className='grid grid-cols-4'>
+                        {/* <div className='grid grid-cols-4'>
                             <div className='font-bold text-[#7C7C7C]'>AGE:</div>
                             <div className='col-span-3'>{currentAge}</div>
-                        </div>
+                        </div> */}
                         <div className='grid grid-cols-4'>
                             <div className='font-bold text-[#7C7C7C]'>PHONE:</div>
                             <div className='col-span-3'>
@@ -50,7 +50,7 @@ const Header = () => {
                         <a href={'https://www.github.com/alphadevking/'} target='_blank' rel='noopener noreferrer' className='text-[#6aadce] hover:text-[#6aadcea9] transition-all duration-300'>
                             <SiGithub />
                         </a>
-                        <a href={'https://www.aedin.com/in/favour-orukpe-31432725b/'} target='_blank' rel='noopener noreferrer' className='text-[#6aadce] hover:text-[#6aadcea9] transition-all duration-300'>
+                        <a href={'https://www.linkedin.com/in/favour-orukpe-31432725b/'} target='_blank' rel='noopener noreferrer' className='text-[#6aadce] hover:text-[#6aadcea9] transition-all duration-300'>
                             <SiLinkedin />
                         </a>
                         <a href={'https://www.twitter.com/alphadevking_1/'} target='_blank' rel='noopener noreferrer' className='text-[#6aadce] hover:text-[#6aadcea9] transition-all duration-300'>

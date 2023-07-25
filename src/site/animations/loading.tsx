@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { useSpring, animated } from 'react-spring';
 
 interface LoadingProps {
@@ -6,13 +6,20 @@ interface LoadingProps {
     className?: string;
 }
 
-function Loading({ size, className }: LoadingProps) {
+function Loading({ size, className = "" }: LoadingProps) {
     const containerRef = useRef<HTMLDivElement>(null);
 
+    // Check size prop validity
+    useEffect(() => {
+        if (isNaN(size) || size < 0 || size > 100) {
+            console.error("Invalid 'size' prop passed to Loading component. Please provide a number between 0 and 100.");
+        }
+    }, [size]);
+
     const containerSpring = useSpring({
-        from: { x: "-100%" },
-        to: { x: "0%" },
-        config: { duration: 500 }
+        from: { width: "0%" },
+        to: { width: `${Math.max(0, Math.min(100, size))}%` },
+        config: { tension: 130, friction: 80 }
     });
 
     return (
@@ -22,7 +29,7 @@ function Loading({ size, className }: LoadingProps) {
         >
             <animated.div
                 style={{
-                    width: containerSpring.x.to(() => `${size}%`),
+                    ...containerSpring,
                     borderRadius: "0",
                     height: "100%",
                     background: "#000",
@@ -30,7 +37,7 @@ function Loading({ size, className }: LoadingProps) {
                 }}
             >
                 <span className={`px-1 text-xs float-right text-slate-100`}>
-                    {size}%
+                    {Math.max(0, Math.min(100, size))}%
                 </span>
             </animated.div>
         </div>
