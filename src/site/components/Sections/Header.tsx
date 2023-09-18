@@ -23,7 +23,7 @@ const Header = () => {
 
                 <div className='grid self-center py-6 px-3 tracking-wider gap-y-2 col-span-2'>
                     <Motion variant={variants.fadeInFromRight} className='text-5xl font-bold'>Favour Orukpe_</Motion>
-                    <div className='text-[#8e8e8e]'>Blockchain Dev since <strong>2022</strong> | Front-End & Web3 Developer</div>
+                    <div className='text-[#8e8e8e]'>Blockchain Dev since <strong>2022</strong> | Frontend & Backend Developer</div>
                     <div className='mt-8 grid gap-y-2'>
                         {/* <div className='grid grid-cols-4'>
                             <div className='font-bold text-[#7C7C7C]'>AGE:</div>
