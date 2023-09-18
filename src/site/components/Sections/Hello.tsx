@@ -10,7 +10,10 @@ const Hello = () => {
             <Typewriter className="text-3xl" text="Hello_"/>
 
             <div className="text-justify">
-                I am a professional frontend web developer with expertise in scripting languages, multimedia web technologies, and the latest industry standards. I hold a Bachelors degree in Computer Science and have practical experience in computer networking. As a tutor and intern, I have worked extensively on frontend web development, specializing in technologies such as React, TypeScript, and Web3 (Blockchain). With a strong ability to construct fully integrated websites and a focus on delivering the best user experience. I am diligent, quick to learn, and a valuable team member. Proficient in HTML, CSS, TailwindCSS, Python, Vanilla JavaScript, Git, Gatsby and ReactJs, I am committed to writing efficient, reliable, and visually appealing code.
+                I am a proficient full-stack software engineer known for my ability to construct fully integrated websites from the ground up, ensuring exceptional user experiences. My educational background includes a Bachelor's degree from Ambrose Alli University, earned in 2023, which provided me with a solid foundation in computer science.
+                Presently an intern at SMART EARNERS TEAM, I work as a web developer. In this capacity, I employ technologies such as React, TypeScript, and Web3 to craft dynamic and interactive web applications. I have a knack for swift learning and continuously strive to keep up with the latest industry standards and best practices.
+                My skill set extends to scripting languages and multimedia web technologies, including proficiency in HTML 5.0, Bootstrap 5, CSS 3.0, Python, JavaScript, Git, TypeScript, and ReactJs. These abilities enable me to produce efficient and clean code that adheres to industry standards, delivering top-tier user experiences.
+                In addition to my frontend capabilities, I've also honed my skills in backend development using Laravel and Django. I excel in integrating these frameworks seamlessly with frontend technologies like React, Vite, and Next.js, ensuring a cohesive and efficient web development process.
             </div>
 
             <a target='_blank' href={'/alphadevking.pdf'} className="flex gap-2 align-middle text-blue-500">
