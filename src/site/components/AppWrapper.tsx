@@ -1,6 +1,5 @@
 import React from 'react'
-import { GlobalTypes } from '../globals' 
-// import { ThemeProvider } from 'next-themes'
+import { GlobalTypes } from '../globals'
 
 export const AppWrapper:React.FC<GlobalTypes> = ({ children }) => {
   return (

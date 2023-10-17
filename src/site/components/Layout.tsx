@@ -17,9 +17,16 @@ const Layout: React.FC<GlobalTypes> = ({ navbar, children, footer }) => {
         gtranslateScript.defer = true;
         document.body.appendChild(gtranslateScript);
 
+        const linkedinProfileScript = document.createElement('script');
+        linkedinProfileScript.src = "https://platform.linkedin.com/badges/js/profile.js";
+        linkedinProfileScript.async = true;
+        linkedinProfileScript.defer = true;
+        document.body.appendChild(linkedinProfileScript);
+
         return () => { // clean up the scripts on component unmount
             document.body.removeChild(jivositeScript);
             document.body.removeChild(gtranslateScript);
+            document.body.removeChild(linkedinProfileScript);
         };
     }, []); // empty dependency array so the effect only runs once
 
